@@ -1,67 +1,84 @@
 var btnNine = $("#nine");
-// var inputNine = $("#textNine");
+var inputNine = $("#textNine");
 var btnTen = $("#nine");
-// var inputTen = $("#textTen");
+var inputTen = $("#textTen");
 var btnElev = $("#nine");
-// var inputElev = $("#textElev");
+var inputElev = $("#textElev");
 var btnTwel = $("#nine");
-// var inputTwel = $("#textTwel");
+var inputTwel = $("#textTwel");
 var btnOne = $("#nine");
-// var inputOne = $("#textOne");
+var inputOne = $("#textOne");
 var btnTwo = $("#nine");
-// var inputTwo = $("#textTwo");
+var inputTwo = $("#textTwo");
 var btnThree = $("#nine");
-// var inputThree = $("#textThree");
+var inputThree = $("#textThree");
 var btnFour = $("#nine");
-// var inputFour = $("#textFour");
+var inputFour = $("#textFour");
 var btnFive = $("#nine");
-// var inputFive = $("#textFive");
+var inputFive = $("#textFive");
 
+onPageLoad()
 
-$(btnNine).on("click", function getValue(){
-    var inputNine = $("#textNine").val();
-    localStorage.setItem("entryNine", inputNine);
-    // Get the stored input and render it to the page.
-    function getInput() {
-        var storedEntryNine = localStorage.getItem("entryNine");
-        console.log(storedEntryNine);
-        inputNine.val(storedEntryNine);
+function onPageLoad() {
+    getValue();
+    var keys = ["entryNine", "entryTen", "entryElev", "entryTwel", "entryOne", "entryTwo", "entryThree", "entryFour", "entryFive"];
+   
+    for (var i = 0; i<localStorage.length; i++) {
+        inputNine.val(localStorage.getItem(keys[0]));
+        inputTen.val(localStorage.getItem(keys[1]));
+        inputElev.val(localStorage.getItem(keys[2]));
+        inputTwel.val(localStorage.getItem(keys[3]));
+        inputOne.val(localStorage.getItem(keys[4]));
+        inputTwo.val(localStorage.getItem(keys[5]));
+        inputThree.val(localStorage.getItem(keys[6]));
+        inputFour.val(localStorage.getItem(keys[7]));
+        inputFive.val(localStorage.getItem(keys[8]));  
     }
-    getInput();
+};
+
+
+
+function getValue(){
+
+$(btnNine).on("click", function(){
+    var inputNineValue = $("#textNine").val();
+    localStorage.setItem("entryNine", inputNineValue);
 });
 
-$(btnTen).on("click", function getValue(){
-    inputTen = $("#textTen").val();
-    var entryTen = localStorage.setItem("entryTen", inputTen);
+$(btnTen).on("click", function(){
+    inputTenValue = $("#textTen").val();
+    localStorage.setItem("entryTen", inputTenValue);
 });
-$(btnElev).on("click", function getValue(){
-    inputElev = $("#textElev").val();
-    var entryElev = localStorage.setItem("entryElev", inputElev);
+$(btnElev).on("click", function(){
+    inputElevValue = $("#textElev").val();
+    localStorage.setItem("entryElev", inputElevValue);
 });
-$(btnTwel).on("click", function getValue(){
-    inputTwel = $("#textTwel").val();
-    var entryTwel = localStorage.setItem("entryTwel", inputTwel);
+$(btnTwel).on("click", function(){
+    inputTwelValue = $("#textTwel").val();
+    localStorage.setItem("entryTwel", inputTwelValue);
 });
-$(btnOne).on("click", function getValue(){
-    inputOne = $("#textOne").val();
-    var entryOne = localStorage.setItem("entryOne", inputOne);
+$(btnOne).on("click", function(){
+    inputOneValue = $("#textOne").val();
+    localStorage.setItem("entryOne", inputOneValue);
 });
-$(btnTwo).on("click", function getValue(){
-    inputTwo = $("#textTwo").val();
-    var entryTwo = localStorage.setItem("entryTwo", inputTwo);
+$(btnTwo).on("click", function(){
+    inputTwoValue = $("#textTwo").val();
+    localStorage.setItem("entryTwo", inputTwoValue);
 });
-$(btnThree).on("click", function getValue(){
-    inputThree = $("#textThree").val();
-    var entryThree = localStorage.setItem("entryThree", inputThree);
+$(btnThree).on("click", function(){
+    inputThreeValue = $("#textThree").val();
+    localStorage.setItem("entryThree", inputThreeValue);
 });
-$(btnFour).on("click", function getValue(){
-    inputFour = $("#textFour").val();
-    var entryFour = localStorage.setItem("entryFour", inputFour);
+$(btnFour).on("click", function(){
+    inputFourValue = $("#textFour").val();
+    localStorage.setItem("entryFour", inputFourValue);
 });
-$(btnFive).on("click", function getValue(){
-    inputFive = $("#textFive").val();
-    var entryFive = localStorage.setItem("entryFive", inputFive);
+$(btnFive).on("click", function(){
+    inputFiveValue = $("#textFive").val();
+    localStorage.setItem("entryFive", inputFiveValue);
 });
+
+};
 
 
 
