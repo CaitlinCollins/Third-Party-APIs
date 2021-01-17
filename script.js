@@ -22,6 +22,7 @@ onPageLoad()
 function onPageLoad() {
     getValue();
     getCurrentDate();
+
     var keys = ["entryNine", "entryTen", "entryElev", "entryTwel", "entryOne", "entryTwo", "entryThree", "entryFour", "entryFive"];
    
     for (var i = 0; i<localStorage.length; i++) {
@@ -85,10 +86,27 @@ $(btnFive).on("click", function(){
 
 // Setting the local date and time.
 function getCurrentDate(){
-    const now = moment().format("MMMM Do YYYY, h:mm:ss a");
-    console.log(now);
-
     var today = moment().format("dddd, MMMM Do");
     var currentDay = $("#currentDay");
     currentDay.html(today);
-}
+
+    var description = $(".description");
+    const hour = moment().format("h");
+    console.log(hour);
+
+    var hourArray = ["9", "10", "11", "12", "1", "2", "3", "4", "5"];
+
+    for (i=0; i<hourArray.length; i++) {
+
+    if (hour === parseInt(hourArray[i])) {
+        description.attr("class", "present");
+    }
+    else if (hour < parseInt(hourArray[i])) {
+        description.attr("class", "future");
+    }
+    else 
+    description.attr("class", "past");
+};
+};
+
+
