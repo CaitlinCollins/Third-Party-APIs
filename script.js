@@ -1,20 +1,20 @@
 var btnNine = $("#nine");
 var inputNine = $("#textNine");
-var btnTen = $("#nine");
+var btnTen = $("#ten");
 var inputTen = $("#textTen");
-var btnElev = $("#nine");
+var btnElev = $("#eleven");
 var inputElev = $("#textElev");
-var btnTwel = $("#nine");
+var btnTwel = $("#twelve");
 var inputTwel = $("#textTwel");
-var btnOne = $("#nine");
+var btnOne = $("#one");
 var inputOne = $("#textOne");
-var btnTwo = $("#nine");
+var btnTwo = $("#two");
 var inputTwo = $("#textTwo");
-var btnThree = $("#nine");
+var btnThree = $("#three");
 var inputThree = $("#textThree");
-var btnFour = $("#nine");
+var btnFour = $("#four");
 var inputFour = $("#textFour");
-var btnFive = $("#nine");
+var btnFive = $("#five");
 var inputFive = $("#textFive");
 
 onPageLoad()
@@ -33,7 +33,7 @@ function onPageLoad() {
         inputThree.val(localStorage.getItem(keys[6]));
         inputFour.val(localStorage.getItem(keys[7]));
         inputFive.val(localStorage.getItem(keys[8]));  
-    }
+    };
 };
 
 
@@ -46,35 +46,36 @@ $(btnNine).on("click", function(){
 });
 
 $(btnTen).on("click", function(){
-    inputTenValue = $("#textTen").val();
+    var inputTenValue = $("#textTen").val();
     localStorage.setItem("entryTen", inputTenValue);
 });
+
 $(btnElev).on("click", function(){
-    inputElevValue = $("#textElev").val();
+    var inputElevValue = $("#textElev").val();
     localStorage.setItem("entryElev", inputElevValue);
 });
 $(btnTwel).on("click", function(){
-    inputTwelValue = $("#textTwel").val();
+    var inputTwelValue = $("#textTwel").val();
     localStorage.setItem("entryTwel", inputTwelValue);
 });
 $(btnOne).on("click", function(){
-    inputOneValue = $("#textOne").val();
+    var inputOneValue = $("#textOne").val();
     localStorage.setItem("entryOne", inputOneValue);
 });
 $(btnTwo).on("click", function(){
-    inputTwoValue = $("#textTwo").val();
+    var inputTwoValue = $("#textTwo").val();
     localStorage.setItem("entryTwo", inputTwoValue);
 });
 $(btnThree).on("click", function(){
-    inputThreeValue = $("#textThree").val();
+    var inputThreeValue = $("#textThree").val();
     localStorage.setItem("entryThree", inputThreeValue);
 });
 $(btnFour).on("click", function(){
-    inputFourValue = $("#textFour").val();
+    var inputFourValue = $("#textFour").val();
     localStorage.setItem("entryFour", inputFourValue);
 });
 $(btnFive).on("click", function(){
-    inputFiveValue = $("#textFive").val();
+    var inputFiveValue = $("#textFive").val();
     localStorage.setItem("entryFive", inputFiveValue);
 });
 
