@@ -85,8 +85,10 @@ $(btnFive).on("click", function(){
 
 // Setting the local date and time.
 function getCurrentDate(){
-    const now = moment().format("dddd, MMMM Do YYYY");
+    const now = moment().format("MMMM Do YYYY, h:mm:ss a");
     console.log(now);
-    // var currentDay = $("#currentDay");
-    // currentDay.text(moment);
+
+    var today = moment().format("dddd, MMMM Do");
+    var currentDay = $("#currentDay");
+    currentDay.html(today);
 }
