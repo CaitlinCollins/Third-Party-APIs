@@ -11,7 +11,7 @@ Work Day Scheduler
 
 [Deploy Link](https://github.com/CaitlinCollins/Third-Party-APIs#deploy-link)
 ## Description ##
-The purpose of this project was to create a calendar appliction that allows the user to save events for each hour of the day.  
+The purpose of this project was to create a calendar application that allows the user to save events for each hour of the day.  
 ## Tools ##
 * Functions
 * For Loops
