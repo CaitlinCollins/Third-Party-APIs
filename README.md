@@ -1,5 +1,6 @@
 # Third-Party-APIs #
 Work Day Scheduler
+## Table of Contents ##
 [Description](https://github.com/CaitlinCollins/Third-Party-APIs#description)
 
 [Tools](https://github.com/CaitlinCollins/Third-Party-APIs#Tools)
