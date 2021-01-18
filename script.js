@@ -21,6 +21,7 @@ onPageLoad()
 
 function onPageLoad() {
     getValue();
+    getCurrentDate();
     var keys = ["entryNine", "entryTen", "entryElev", "entryTwel", "entryOne", "entryTwo", "entryThree", "entryFour", "entryFive"];
    
     for (var i = 0; i<localStorage.length; i++) {
@@ -82,7 +83,10 @@ $(btnFive).on("click", function(){
 };
 
 
-
 // Setting the local date and time.
-
-
+function getCurrentDate(){
+    const now = moment().format("dddd, MMMM Do YYYY");
+    console.log(now);
+    // var currentDay = $("#currentDay");
+    // currentDay.text(moment);
+}
