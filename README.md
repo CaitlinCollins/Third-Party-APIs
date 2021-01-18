@@ -24,7 +24,7 @@ The purpose of this project was to create a calendar application that allows the
 * Moment.js
 
 ## Features ##
-* A clean and responsive user interface.
+* A clean user interface that resembles the mock-up.
 * The current day displayed at the top of the calendar.
 * Color-coded time blocks for standard business hours indicating past, present, or future.
 * A function that ends the quiz if the timer reaches 0.
