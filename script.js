@@ -1,112 +1,136 @@
 var btnNine = $("#nine");
-var inputNine = $("#textNine");
+var inputNine = $("#9");
 var btnTen = $("#ten");
-var inputTen = $("#textTen");
+var inputTen = $("#10");
 var btnElev = $("#eleven");
-var inputElev = $("#textElev");
+var inputElev = $("#11");
 var btnTwel = $("#twelve");
-var inputTwel = $("#textTwel");
+var inputTwel = $("#12");
 var btnOne = $("#one");
-var inputOne = $("#textOne");
+var inputOne = $("#1");
 var btnTwo = $("#two");
-var inputTwo = $("#textTwo");
+var inputTwo = $("#2");
 var btnThree = $("#three");
-var inputThree = $("#textThree");
+var inputThree = $("#3");
 var btnFour = $("#four");
-var inputFour = $("#textFour");
+var inputFour = $("#4");
 var btnFive = $("#five");
-var inputFive = $("#textFive");
+var inputFive = $("#5");
 
-onPageLoad()
+onPageLoad();
 
 function onPageLoad() {
-    getValue();
-    getCurrentDate();
+	getValue();
+	getCurrentDate();
 
-    var keys = ["entryNine", "entryTen", "entryElev", "entryTwel", "entryOne", "entryTwo", "entryThree", "entryFour", "entryFive"];
-   
-    for (var i = 0; i<localStorage.length; i++) {
-        inputNine.val(localStorage.getItem(keys[0]));
-        inputTen.val(localStorage.getItem(keys[1]));
-        inputElev.val(localStorage.getItem(keys[2]));
-        inputTwel.val(localStorage.getItem(keys[3]));
-        inputOne.val(localStorage.getItem(keys[4]));
-        inputTwo.val(localStorage.getItem(keys[5]));
-        inputThree.val(localStorage.getItem(keys[6]));
-        inputFour.val(localStorage.getItem(keys[7]));
-        inputFive.val(localStorage.getItem(keys[8]));  
-    };
-};
+	var keys = [
+		"entryNine",
+		"entryTen",
+		"entryElev",
+		"entryTwel",
+		"entryOne",
+		"entryTwo",
+		"entryThree",
+		"entryFour",
+		"entryFive",
+	];
 
+	for (var i = 0; i < localStorage.length; i++) {
+		inputNine.val(localStorage.getItem(keys[0]));
+		inputTen.val(localStorage.getItem(keys[1]));
+		inputElev.val(localStorage.getItem(keys[2]));
+		inputTwel.val(localStorage.getItem(keys[3]));
+		inputOne.val(localStorage.getItem(keys[4]));
+		inputTwo.val(localStorage.getItem(keys[5]));
+		inputThree.val(localStorage.getItem(keys[6]));
+		inputFour.val(localStorage.getItem(keys[7]));
+		inputFive.val(localStorage.getItem(keys[8]));
+	}
+}
 
-
-function getValue(){
-
-$(btnNine).on("click", function(){
-    var inputNineValue = $("#textNine").val();
-    localStorage.setItem("entryNine", inputNineValue);
-});
-
-$(btnTen).on("click", function(){
-    var inputTenValue = $("#textTen").val();
-    localStorage.setItem("entryTen", inputTenValue);
-});
-
-$(btnElev).on("click", function(){
-    var inputElevValue = $("#textElev").val();
-    localStorage.setItem("entryElev", inputElevValue);
-});
-$(btnTwel).on("click", function(){
-    var inputTwelValue = $("#textTwel").val();
-    localStorage.setItem("entryTwel", inputTwelValue);
-});
-$(btnOne).on("click", function(){
-    var inputOneValue = $("#textOne").val();
-    localStorage.setItem("entryOne", inputOneValue);
-});
-$(btnTwo).on("click", function(){
-    var inputTwoValue = $("#textTwo").val();
-    localStorage.setItem("entryTwo", inputTwoValue);
-});
-$(btnThree).on("click", function(){
-    var inputThreeValue = $("#textThree").val();
-    localStorage.setItem("entryThree", inputThreeValue);
-});
-$(btnFour).on("click", function(){
-    var inputFourValue = $("#textFour").val();
-    localStorage.setItem("entryFour", inputFourValue);
-});
-$(btnFive).on("click", function(){
-    var inputFiveValue = $("#textFive").val();
-    localStorage.setItem("entryFive", inputFiveValue);
-});
-
-};
-
+function getValue() {
+	$(btnNine).on("click", function () {
+		var inputNineValue = $("#9").val();
+		localStorage.setItem("entryNine", inputNineValue);
+	});
+	$(btnTen).on("click", function () {
+		var inputTenValue = $("#10").val();
+		localStorage.setItem("entryTen", inputTenValue);
+	});
+	$(btnElev).on("click", function () {
+		var inputElevValue = $("#11").val();
+		localStorage.setItem("entryElev", inputElevValue);
+	});
+	$(btnTwel).on("click", function () {
+		var inputTwelValue = $("#12").val();
+		localStorage.setItem("entryTwel", inputTwelValue);
+	});
+	$(btnOne).on("click", function () {
+		var inputOneValue = $("#1").val();
+		localStorage.setItem("entryOne", inputOneValue);
+	});
+	$(btnTwo).on("click", function () {
+		var inputTwoValue = $("#2").val();
+		localStorage.setItem("entryTwo", inputTwoValue);
+	});
+	$(btnThree).on("click", function () {
+		var inputThreeValue = $("#3").val();
+		localStorage.setItem("entryThree", inputThreeValue);
+	});
+	$(btnFour).on("click", function () {
+		var inputFourValue = $("#4").val();
+		localStorage.setItem("entryFour", inputFourValue);
+	});
+	$(btnFive).on("click", function () {
+		var inputFiveValue = $("#5").val();
+		localStorage.setItem("entryFive", inputFiveValue);
+	});
+}
 
 // Setting the local date and time.
-function getCurrentDate(){
-    var today = moment().format("dddd, MMMM Do");
-    var currentDay = $("#currentDay");
-    currentDay.html(today);
+function getCurrentDate() {
+	var today = moment().format("dddd, MMMM Do");
+	var currentDay = $("#currentDay");
+	currentDay.html(today);
 
-    var description = $(".description");
-    const hour = moment().format("h");
-    console.log(hour);
+	const hour = moment().format("H");
+	console.log(hour);
 
-    var hourArray = ["9", "10", "11", "12", "1", "2", "3", "4", "5"];
+	var hourArray = [];
+	hourArray.push($(".nine"));
+	hourArray.push($(".ten"));
+	hourArray.push($(".eleven"));
+	hourArray.push($(".twelve"));
+	hourArray.push($(".one"));
+	hourArray.push($(".two"));
+	hourArray.push($(".three"));
+	hourArray.push($(".four"));
+	hourArray.push($(".five"));
+	console.log(hourArray);
 
-    for (i=0; i<hourArray.length; i++) {
+	$(".nine").data("val", 9);
+	$(".ten").data("val", 10);
+	$(".eleven").data("val", 11);
+	$(".twelve").data("val", 12);
+	$(".one").data("val", 13);
+	$(".two").data("val", 14);
+	$(".three").data("val", 15);
+	$(".four").data("val", 16);
+	$(".five").data("val", 17);
 
-    if (hour === parseInt(hourArray[i])) {
-        description.attr("class", "present");
-    }
-    else if (hour < parseInt(hourArray[i])) {
-        description.attr("class", "future");
-    }
-    else 
-    description.attr("class", "past");
-};
-};
+	function setColors() {
+		console.log("hello");
 
-
+		for (i = 0; i < hourArray.length; i++) {
+			console.log(hourArray[i].data("val"));
+			if (hour < hourArray[i].data("val")) {
+				hourArray[i].attr("class", "future");
+			} else if (hour > hourArray[i].data("val")) {
+				hourArray[i].attr("class", "past");
+			} else {
+				hourArray[i].attr("class", "present");
+			}
+		}
+	}
+	setColors();
+}
