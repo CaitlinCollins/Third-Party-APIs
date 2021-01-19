@@ -19,10 +19,12 @@ var inputFive = $("#5");
 
 onPageLoad();
 
+// Runs the setValue and getCurrentDate functions on page load.
 function onPageLoad() {
-	getValue();
+	setValue();
 	getCurrentDate();
 
+	// Creates an array of local storage keys.
 	var keys = [
 		"entryNine",
 		"entryTen",
@@ -35,6 +37,7 @@ function onPageLoad() {
 		"entryFive",
 	];
 
+	// Gets the values from all of the local Storage keys and sets those values to the corresponding text area.
 	for (var i = 0; i < localStorage.length; i++) {
 		inputNine.val(localStorage.getItem(keys[0]));
 		inputTen.val(localStorage.getItem(keys[1]));
@@ -48,7 +51,8 @@ function onPageLoad() {
 	}
 }
 
-function getValue() {
+// Set the value of the text areas to local storage when the save button is clicked.
+function setValue() {
 	$(btnNine).on("click", function () {
 		var inputNineValue = $("#9").val();
 		localStorage.setItem("entryNine", inputNineValue);
@@ -87,50 +91,50 @@ function getValue() {
 	});
 }
 
-// Setting the local date and time.
+// Setting the local date and time to the current day paragraph.
 function getCurrentDate() {
 	var today = moment().format("dddd, MMMM Do");
 	var currentDay = $("#currentDay");
 	currentDay.html(today);
+}
 
-	const hour = moment().format("H");
-	console.log(hour);
+// Sets the current hour to military time.
+const hour = moment().format("H");
 
-	var hourArray = [];
-	hourArray.push($(".nine"));
-	hourArray.push($(".ten"));
-	hourArray.push($(".eleven"));
-	hourArray.push($(".twelve"));
-	hourArray.push($(".one"));
-	hourArray.push($(".two"));
-	hourArray.push($(".three"));
-	hourArray.push($(".four"));
-	hourArray.push($(".five"));
-	console.log(hourArray);
+// Creates an array of the text areas.
+var hourArray = [];
+hourArray.push($(".nine"));
+hourArray.push($(".ten"));
+hourArray.push($(".eleven"));
+hourArray.push($(".twelve"));
+hourArray.push($(".one"));
+hourArray.push($(".two"));
+hourArray.push($(".three"));
+hourArray.push($(".four"));
+hourArray.push($(".five"));
 
-	$(".nine").data("val", 9);
-	$(".ten").data("val", 10);
-	$(".eleven").data("val", 11);
-	$(".twelve").data("val", 12);
-	$(".one").data("val", 13);
-	$(".two").data("val", 14);
-	$(".three").data("val", 15);
-	$(".four").data("val", 16);
-	$(".five").data("val", 17);
+// Gives the text areas number values according to military time.
+$(".nine").data("val", 9);
+$(".ten").data("val", 10);
+$(".eleven").data("val", 11);
+$(".twelve").data("val", 12);
+$(".one").data("val", 13);
+$(".two").data("val", 14);
+$(".three").data("val", 15);
+$(".four").data("val", 16);
+$(".five").data("val", 17);
 
-	function setColors() {
-		console.log("hello");
-
-		for (i = 0; i < hourArray.length; i++) {
-			console.log(hourArray[i].data("val"));
-			if (hour < hourArray[i].data("val")) {
-				hourArray[i].attr("class", "future");
-			} else if (hour > hourArray[i].data("val")) {
-				hourArray[i].attr("class", "past");
-			} else {
-				hourArray[i].attr("class", "present");
-			}
+// Set the colors of the text areas to relfect the current time, past and future.
+function setColors() {
+	for (i = 0; i < hourArray.length; i++) {
+		console.log(hourArray[i].data("val"));
+		if (hour < hourArray[i].data("val")) {
+			hourArray[i].attr("class", "future");
+		} else if (hour > hourArray[i].data("val")) {
+			hourArray[i].attr("class", "past");
+		} else {
+			hourArray[i].attr("class", "present");
 		}
 	}
-	setColors();
 }
+setColors();
