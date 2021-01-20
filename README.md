@@ -35,11 +35,15 @@ The purpose of this project was to create a calendar application that allows the
 - A clean user interface that resembles the mock-up.
 - The current day displayed at the top of the calendar.
 - Color-coded time blocks for standard business hours indicating past, present, or future.
-- A function that ends the quiz if the timer reaches 0.
 - Entries are saved when individual save buttons are clicked.
 - The entries stay on the page when the page is refreshed.
 - No errors in the console log.
 
-## Screen Shots
+## Screen Shots ## 
+![Schedule1](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/screenshots/Schedule1.png)
+![Schedule2](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/screenshots/Schedule2.png)
+![Schedule3](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/screenshots/Schedule3.png)
 
-## Deploy Link##
+## Deploy Link ##
+https://caitlincollins.github.io/Third-Party-APIs/
+
