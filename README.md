@@ -40,9 +40,9 @@ The purpose of this project was to create a calendar application that allows the
 - No errors in the console log.
 
 ## Screen Shots ## 
-![Schedule1](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/screenshots/Schedule1.png)
-![Schedule2](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/screenshots/Schedule2.png)
-![Schedule3](https://github.com/CaitlinCollins/Password-Generator/blob/main/Assets/screenshots/Schedule3.png)
+![Schedule1](https://github.com/CaitlinCollins/Third-Party-APIs/blob/main/Assets/screenshots/Schedule1.png)
+![Schedule2](https://github.com/CaitlinCollins/Third-Party-APIs/blob/main/Assets/screenshots/Schedule2.png)
+![Schedule3](https://github.com/CaitlinCollins/Third-Party-APIs/blob/main/Assets/screenshots/Schedule3.png)
 
 ## Deploy Link ##
 https://caitlincollins.github.io/Third-Party-APIs/
